@@ -1,21 +1,26 @@
-export interface Product  {
-    _id:string;
-     productName:string;
-    description:string;
+export interface Product {
+    _id : string;
+    productName: string;
+    category: string;
     _type :"product";
-    price:number;
-   /* image? :{
+    price :number;
+    image? :{
+        _type:"image";
         asset :{
             _ref :string;
             _type : "image";
+
         }
-    }*/
+    };
+    slug :{
+        _type:"slug";
+        current: string;
+    
+    };
+    description :string;
     status:string;
-    color:any;
-    category:string;
-    imageUrl: string[];
-    slug:{
-        _type :"slug"
-        current : string;
-    }
+    inventory:number;
+    colors :string[];
+    
+
 }
